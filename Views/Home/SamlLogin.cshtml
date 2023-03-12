@@ -1,0 +1,14 @@
+﻿
+<script>
+    window.onload = 
+    function() {
+        document.forms['SamlLogin'].submit();
+    }
+</script>
+<div>
+    <form name="SamlLogin" action="@ViewBag.uri" method="post">
+        <div>
+            @Html.Hidden("SAMLRequest", (object)ViewBag.SamlRequest) <label><input type="submit" value="submit" /></label>
+        </div>
+    </form>
+</div>
